@@ -28,7 +28,6 @@ body {
 .transparent_box_text{
 	background-color: #fff;
 	opacity: 0.8;
-	width: 90%;
 	padding: 20px;
 	margin: 0 auto;
 	float: left;
@@ -64,27 +63,44 @@ body {
 
 #commenter{
 	padding: 20px;
-	width: 200px;
+	width: 300px;
 	margin: 0 auto;
 }
 
-#commenter h2{
-	width: 300px;
+#commenter form{
+	width: 200px;
+}
+
+#links{
+	/*background-color: red;*/
+	width: 200px;
 	margin: 0 auto;
+	padding: 0;
+}
+
+#links a{
+	/*padding: 20px;*/
+	width: 80px;
+	/*margin: 10px;*/
+	/*background-color: green;*/
+	float: left;
 }
 
 
 #new_comment{
 	margin: 0 auto;
-	width: 250px;
+	width: 300px;
 }
 
 
 .comment{
 	padding: 20px;
-	border-bottom: solid 1px #4d0061;
-	margin: 15px;
-	color: #4d0061;
+	background-color: #4d0061;
+	margin: 0 auto;
+	color: white;
+	border-bottom: solid 1px white;
+	margin-top: 10px;
+	width: 80%;
 }
 
 
@@ -93,6 +109,10 @@ body {
 
 }
 
+#show_article h2{
+	margin-left: 20px;
+	margin-bottom: 0px;
+}
 
 .btns{
 
