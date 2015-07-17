@@ -1,5 +1,7 @@
-<div class="transparent_box"
-<%= form_for @article do |f| %>
+<div class="transparent_box_form">
+<h1>New article</h1>
+
+<%= form_for @article, :html => { :multipart => true }  do |f| %>
  
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +16,12 @@
       </ul>
     </div>
   <% end %>
- 
+  
+  <p>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </p>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -30,4 +37,5 @@
   </p>
  
 <% end %>
+<%= link_to 'Back', articles_path %>
 </div>

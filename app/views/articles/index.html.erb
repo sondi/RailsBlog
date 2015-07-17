@@ -1,27 +1,29 @@
 
-<h1>Share Inspiration</h1>
+<div class="transparent_box_text"> 
+<h1>Things that inspire...</h1>
 <h3>Listing articles</h3>
-  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  
-
-  </tr>
- 
   <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+<!--  <div id="post"> -->
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= image_tag(article.image_url)%>
+    <div class="caption">
+      <h1><%= article.title %></h1>
+      <p><%= article.text %></p>
+    </div>
+    <div id="btns">
+        <ul>
+        <li><%= link_to 'Show', article_path(article) %></li>
+        <li><%= link_to 'Edit', edit_article_path(article) %></li>
+        <li><%= link_to 'Destroy', article_path(article),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!--   </div> --> 
   <% end %>
-</table>
+</div>
 
 

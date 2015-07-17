@@ -6,6 +6,7 @@ td{
 h1{
 	color:#4d0061;
 
+
 }
 
 body {
@@ -15,14 +16,116 @@ body {
 	padding: 60px;
 }
 
-.transparent_box{
+.transparent_box_form{
 	background-color: #fff;
-	opacity: 0.9;
+	opacity: 0.8;
 	width: 300px;
 	padding: 30px;
 	margin: 0 auto;
+	background-image: url("/img/dots.png");
 }
 
+.transparent_box_text{
+	background-color: #fff;
+	opacity: 0.8;
+	width: 90%;
+	padding: 20px;
+	margin: 0 auto;
+	float: left;
+	background-image: url("/img/dots.png");
+}
+
+
+.transparent_box_show_article{
+
+	opacity: 0.8;
+	width: 40%;
+	padding: 0px;
+	margin: 0 auto;
+	background-image: url("/img/dots.png");
+	/*float: left;*/
+
+}
+
+
+.transparent_box_show_article img{
+	padding: 20px;
+	background-image: url("/img/dots.png");
+}
+
+
+.col-md-4{
+	padding: 7px;
+}
+
+.col-md-5{
+	padding: 30px;
+}
+
+#commenter{
+	padding: 20px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#commenter h2{
+	width: 300px;
+	margin: 0 auto;
+}
+
+
+#new_comment{
+	margin: 0 auto;
+	width: 250px;
+}
+
+
+.comment{
+	padding: 20px;
+	border-bottom: solid 1px #4d0061;
+	margin: 15px;
+	color: #4d0061;
+}
+
+
+#show_article{
+	padding: 20px;
+
+}
+
+
+.btns{
+
+	margin-bottom: 0;
+	margin: 0 auto;
+	width: 100%;
+	/*position: absolute;*/
+
+}
+
+#btns li{
+	text-decoration: none;
+	padding: 10px;
+	margin: 10px;
+	display: inline-block;
+	background-color: #00ffbf;
+}
+
+#btns li:hover{
+	background-color: #4d0061;
+}
+
+#btns li a{
+	color:#4d0061;
+}
+
+#btns li a:hover{
+	text-decoration: none;
+	color:white;
+
+	/*padding: 10px;*/
+
+}
 /*#new_article{
 	padding: 60px;
 }
