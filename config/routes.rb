@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
   get 'users/index'
-
+  
+  resources :users
+  resources :sessions, only:[:new, :create]
+  
   resources :articles do
     resources :comments 
   end

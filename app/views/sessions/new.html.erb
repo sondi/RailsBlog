@@ -1,0 +1,18 @@
+<div class="transparent_box_form">
+	<h1>Sign In</h1>
+	<%= form_for :session, url: sessions_path do |f| %>
+	  <p>
+	    <%= f.label :username %><br>
+	    <%= f.text_field :username %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :password %><br>
+	    <%= f.text_field :password %>
+	  </p>
+	 
+	  <p>
+	    <%= f.submit %>
+	  </p>
+	<% end %>
+</div>

@@ -9,11 +9,22 @@ h1{
 
 }
 
-body {
-	width: 100%;
+body{
 	background-color:#4d0061;
 	background-image: url("/img/optimized.jpg");
+}
+
+#container {
+	width: 100%;
 	padding: 60px;
+	padding-top: 120px;
+}
+
+#head{
+	position: absolute;
+	background-color: #34f8b0;
+	width: 100%;
+	height: 120px;
 }
 
 .transparent_box_form{
