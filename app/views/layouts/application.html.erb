@@ -8,9 +8,13 @@
 </head>
 <body>
 	<div id="head">
-		<form>
-
-		</form>
+		<%if logged_in?%>
+			<%=current_user.username%>
+			<%=link_to 'LogOut', session_path(current_user), method: :delete%>
+		<%else%>
+			<%=link_to 'SignIn', new_session_path%>
+			<%=link_to 'SignUp', new_user_path%>
+		<%end%>
 	</div>
 <div id="container">
 	<%=yield %>
