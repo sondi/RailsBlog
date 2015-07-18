@@ -1,9 +1,14 @@
-<div class="transparent_box_form">
-
-<h1>Welcome</h1>
-<%= link_to 'Sign In', new_session_path %><br><br>
-<%= link_to 'Sign Up', new_user_path %><br><br>
-<%= link_to 'My Blog', articles_path %><br><br>
-<%= link_to 'New article', new_article_path %>
-
+<div class="transparent_box_text"> 
+  <% @articles.inspect%> 
+  <% @articles.each do |article| %>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= image_tag(article.image_url)%>
+      <div class="caption">
+        <h1><%= article.title %></h1>
+      </div>
+      <%= link_to 'Show', article_path(article) %>
+    </div>
+  </div>
+  <% end %>
 </div>
