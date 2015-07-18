@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
 	
 	def index
-    	@articles = Article.all
+    	@articles = current_user.articles
+
   	end
 
 	def show
@@ -47,6 +48,6 @@ class ArticlesController < ApplicationController
 	private
 
 	  def article_params
-	    params.require(:article).permit(:title, :text, :image)
+	    params.require(:article).permit(:title, :text, :image).merge(user_id: current_user.id)
 	  end
 end
