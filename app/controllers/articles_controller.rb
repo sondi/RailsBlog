@@ -2,11 +2,13 @@ class ArticlesController < ApplicationController
 	
 	def index
     	@articles = Article.all
-
   	end
 
 	def show
     	@article = Article.find(params[:id])
+    	user_id = @article.user_id
+    	user = User.find(user_id)
+    	@user_name = user.name
   	end
 
 	def edit

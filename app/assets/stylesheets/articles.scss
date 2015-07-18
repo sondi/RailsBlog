@@ -13,6 +13,22 @@ body{
 	background-image: url("/img/optimized.jpg");
 }
 
+#article_text{
+	width: 400px;
+	height: 600px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+#user form{
+	margin: 0 auto;
+	width: 200px;
+}
+
+#user h1{
+	padding-left: 16px;
+}
+
 #container {
 	width: 100%;
 	padding: 60px;
@@ -29,7 +45,7 @@ body{
 .transparent_box_form{
 	background-color: #fff;
 	opacity: 0.8;
-	width: 300px;
+	width: 37%;
 	padding: 30px;
 	margin: 0 auto;
 	background-image: url("/img/dots.png");
