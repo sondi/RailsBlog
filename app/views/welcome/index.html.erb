@@ -1,6 +1,20 @@
 <div class="transparent_box_text"> 
   <% @articles.inspect%> 
+  <%rows = []%>
+  <%odd_count = []%>
+  <%n = 4%>
   <% @articles.each do |article| %>
+  <%rows << article%>
+    <%count = rows.length%>
+      <% if count == n%>
+        <% odd_count << count%>
+        <div id="odd_count">
+          <% odd_count %>
+          <p></p>
+        </div>
+        <%n += 3%>
+        <% puts "este es odd_count: #{odd_count}" %>
+      <%end%>
   <div class="col-md-4">
     <div class="thumbnail">
       <%= image_tag(article.image_url)%>

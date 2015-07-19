@@ -2,26 +2,40 @@
 <h1>Things that inspire...</h1>
 <%=link_to 'New Artcle', new_article_path%>
 <h3>Listing articles</h3>
+  <%rows = []%>
+  <%odd_count = []%>
+  <%n = 4%>
   <% @articles.each do |article| %>
-<!--  <div id="post"> -->
+  <%rows << article%>
+    <%count = rows.length%>
+      <% if count == n%>
+        <% odd_count << count%>
+        <div id="odd_count">
+          <% odd_count %>
+          <p></p>
+        </div>
+        <%n += 3%>
+        <% puts "este es odd_count: #{odd_count}" %>
+      <%end%>
+<div class="rows"> 
   <div class="col-md-4">
     <div class="thumbnail">
       <%= image_tag(article.image_url)%>
-    <div class="caption">
-      <h1><%= article.title %></h1>
-      <p><%= article.text %></p>
-    </div>
-    <div id="btns">
-        <ul>
-        <li><%= link_to 'Show', article_path(article) %></li>
-        <li><%= link_to 'Edit', edit_article_path(article) %></li>
-        <li><%= link_to 'Destroy', article_path(article),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %></li>
-        </ul>
+      <div class="caption">
+        <h1><%= article.title %></h1>
+        <p><%= article.text %></p>
       </div>
-    </div>
+        <div id="btns">
+            <ul>
+            <li><%= link_to 'Show', article_path(article) %></li>
+            <li><%= link_to 'Edit', edit_article_path(article) %></li>
+            <li><%= link_to 'Destroy', article_path(article),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></li>
+            </ul>
+        </div>
+      </div>
   </div>
-<!--   </div> --> 
+</div>
   <% end %>
 </div>
