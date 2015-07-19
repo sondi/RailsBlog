@@ -8,13 +8,21 @@
 </head>
 <body>
 	<div id="head">
+		<h1>Welcome to Artcl</h1>
 		<%if logged_in?%>
-			<%=current_user.username%>
-			<%=link_to 'LogOut', session_path(current_user), method: :delete%>
-			<%=link_to 'New Article', new_article_path%>
+			<div id="layout_login">
+				<ul>
+					<li><%=current_user.username%></li>
+					<li><%=link_to 'LogOut', session_path(current_user), method: :delete%></li>
+					<li><%=link_to 'New Article', new_article_path%></li>
+				</ul>
+			</div>
 		<%else%>
-			<%=link_to 'Log In', new_session_path%>
+			<div id="layout_logout">
 			<%=link_to 'Sign Up', new_user_path%>
+			<%=link_to 'Log In', new_session_path%>
+			<h3>Sign in to start publishing</h3>
+			</div>
 		<%end%>
 	</div>
 <div id="container">

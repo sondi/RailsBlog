@@ -6,6 +6,7 @@
       <%= image_tag(article.image_url)%>
       <div class="caption">
         <h1><%= article.title %></h1>
+        <h3><%= @author%></h3>
       </div>
       <%= link_to 'Show', article_path(article) %>
     </div>
