@@ -8,7 +8,9 @@ class ArticlesController < ApplicationController
     	@article = Article.find(params[:id])
     	user_id = @article.user_id
     	user = User.find(user_id)
-    	@author = user.name
+    	name = user.name.titlecase
+    	last_name = user.last_name.titlecase
+    	@author = "#{name + " " + last_name}"
   	end
 
 	def edit

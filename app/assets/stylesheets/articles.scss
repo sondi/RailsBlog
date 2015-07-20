@@ -65,8 +65,17 @@ body{
 
 #layout_login{
 	margin-right: 50px;
-	width: 150px;
 	float: right;
+}
+
+#layout_login ul{
+	width: 500px;
+}
+
+#layout_login a{
+	width: 150px;
+	color: white;
+	text-decoration: none;
 	font-weight: bold;
 	font-size: 1.5em;
 	color: white;
@@ -75,6 +84,11 @@ body{
 	margin: 0 auto;
 	background-color: #ff5565;
 	opacity: 0.8;
+
+}
+
+#layout_login li{
+	display: inline-block;
 }
 
 #layout_logout{
@@ -154,6 +168,9 @@ body{
 
 .col-md-4{
 	padding: 7px;
+	float: left;
+	/*border: solid 3px red;*/
+	margin-top: 0px;
 }
 
 .col-md-5{
